@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jGV-UD-eL6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EBj-Lb-dfu">
+            <objects>
+                <viewController id="jGV-UD-eL6" customClass="ViewController" customModule="Sambag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RyZ-J1-H8G"/>
+                        <viewControllerLayoutGuide type="bottom" id="Blq-Ud-fR4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vC1-id-xAa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LV-vr-eBn">
+                                <rect key="frame" x="126.5" y="318.5" width="122" height="30"/>
+                                <state key="normal" title="Show Time Picker"/>
+                                <connections>
+                                    <action selector="showSambagTimePickerViewController:" destination="jGV-UD-eL6" eventType="touchUpInside" id="R8b-vN-RX9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agw-i8-zVf">
+                                <rect key="frame" x="104" y="356" width="167" height="30"/>
+                                <state key="normal" title="Show Month Year Picker"/>
+                                <connections>
+                                    <action selector="showSambagMonthYearPickerViewController:" destination="jGV-UD-eL6" eventType="touchUpInside" id="bP9-oA-M2d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyF-c4-edg">
+                                <rect key="frame" x="127" y="281" width="121" height="30"/>
+                                <state key="normal" title="Show Date Picker"/>
+                                <connections>
+                                    <action selector="showSambagDatePickerViewController:" destination="jGV-UD-eL6" eventType="touchUpInside" id="LXm-Me-Leb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EV-5L-cv4">
+                                <rect key="frame" x="16" y="595" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="yJ9-5p-X0w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8LV-vr-eBn" firstAttribute="centerY" secondItem="vC1-id-xAa" secondAttribute="centerY" id="CVc-YB-UJs"/>
+                            <constraint firstItem="8LV-vr-eBn" firstAttribute="centerX" secondItem="vC1-id-xAa" secondAttribute="centerX" id="X3V-dR-drJ"/>
+                            <constraint firstAttribute="trailing" secondItem="7EV-5L-cv4" secondAttribute="trailing" constant="16" id="bH1-YX-qlZ"/>
+                            <constraint firstItem="Agw-i8-zVf" firstAttribute="centerX" secondItem="vC1-id-xAa" secondAttribute="centerX" id="bsP-31-1vO"/>
+                            <constraint firstItem="Agw-i8-zVf" firstAttribute="top" secondItem="8LV-vr-eBn" secondAttribute="bottom" constant="7.5" id="fvJ-Se-IV7"/>
+                            <constraint firstItem="nyF-c4-edg" firstAttribute="centerX" secondItem="vC1-id-xAa" secondAttribute="centerX" id="ix6-9S-6GR"/>
+                            <constraint firstItem="Blq-Ud-fR4" firstAttribute="top" secondItem="7EV-5L-cv4" secondAttribute="bottom" constant="20" id="khn-cp-I3q"/>
+                            <constraint firstItem="7EV-5L-cv4" firstAttribute="leading" secondItem="vC1-id-xAa" secondAttribute="leading" constant="16" id="olU-Op-lnm"/>
+                            <constraint firstItem="8LV-vr-eBn" firstAttribute="top" secondItem="nyF-c4-edg" secondAttribute="bottom" constant="7.5" id="qUp-zZ-9cG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aIr-ME-Nfn"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="7EV-5L-cv4" id="YaG-iq-4ri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2VT-uf-l8O" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
